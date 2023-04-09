@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+
+	<div class="section">
+		<div class="container">
+			<div class="row full-height justify-content-center">
+				<div class="col-12 text-center align-self-center py-5">
+					<div class="section pb-5 pt-5 pt-sm-2 text-center">
+						<div class="card-3d-wrap mx-auto">
+							<div class="card-3d-wrapper">
+								<div class="card-front">
+									<div class="center-wrap">
+										<div class="section text-center">
+											<h1 style="position: relative;left:23%;bottom:5%"> Predict Diabities</h1>
+											<div class="form-group mt-2">
+                        <form action="{{ url_for('predict')}}"method="post">
+												<input type="text" name="Pregnancies" class="form-style" placeholder="Enter Number of Pregnancies(If Female)" required="required"><br>
+											</div>	
+											<div class="form-group mt-2 ">
+												<input type="text" name="Glucose" class="form-style" placeholder="Enter Glucose Level" required="required">
+											</div>
+                        
+<div class="form-group mt-2 ">
+												<input type="text" name="BloodPressure" class="form-style" placeholder="Enter your Blood Pressure" required="required">
+											</div>
+
+<div class="form-group mt-2 ">
+												<input type="text" name="SkinThickness" class="form-style" placeholder="Enter your Skin Thickness" required="required">
+											</div>
+                        
+<div class="form-group mt-2 ">
+												<input type="text" name="Insulin" class="form-style" placeholder="Enter your Insulin Level" required="required">
+											</div>
+                        
+<div class="form-group mt-2 ">
+												<input type="text" name="BMI" class="form-style" placeholder="Enter your BMI Level" required="required">
+											</div>  
+                        
+<div class="form-group mt-2 ">
+												<input type="text" name="DiabitiesPedigreeFunction" class="form-style" placeholder="Enter your Diabities Pedigree Number" required="required">
+											</div>
+                        
+<div class="form-group mt-2 ">
+												<input type="text" name="Age" class="form-style" placeholder="Enter your Age" required="required">
+											</div>
+													<br>
+											<button type="submit" class="btn mt-4">Predict</button>
+											
+				      					</div>
+										<br><br>
+										  <div style="position:relative; left : 12%; top:25%">{{ prediction_text }}</div>
+			      					</div>
+			      				</div>
+                  </form>
+               
+                
+	
+</body>
+</html>
